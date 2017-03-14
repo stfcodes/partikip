@@ -1,16 +1,29 @@
 {
   "manifest_version": 2,
   "name": "Partikip",
-  "version": "1.0",
-  "description": "Replaces some words with 'partikip'",
+  "version": "1.1",
+  "description": "Modifică 'particip' cu 'partikip' pe Facebook, Messenger, și Whatsapp.",
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
   "content_scripts": [
     {
-      "matches": ["*://*/*"],
-      "js": ["partikip.js"],
+      "matches": [
+        "*://www.facebook.com/*",
+        "*://www.messenger.com/*",
+        "*://web.whatsapp.com/*"
+      ],
+      "js": ["src/partikip.js"],
       "run_at": "document_end"
     }
   ],
   "browser_action": {
-    "default_icon": "logo.png"
+    "default_icon": {
+      "16": "images/icon16.png",
+      "24": "images/icon24.png",
+      "32": "images/icon32.png"
+    }
   }
 }
