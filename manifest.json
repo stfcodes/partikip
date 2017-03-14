@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Partikip",
+  "version": "1.0",
+  "description": "Replaces some words with 'partikip'",
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["partikip.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "browser_action": {
+    "default_icon": "logo.png"
+  }
+}
